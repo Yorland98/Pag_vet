@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMV Álvaro Andres Contreras</title>
+    <link rel="icon" href="static/img/logos/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de redes sociales --> 
+    <div class="social-bar">
+        <div class="social-icons">
+            <a href="https://wa.me/573106494346" class="whatsapp" target="_blank" rel="noopener">
+                <img src="static/img/logos/whatsapp.webp" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/vet.alvarocontreras/" class="instagram" target="_blank" rel="noopener">
+                <img src="static/img/logos/instagram.webp" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/tuusuario" class="facebook" target="_blank" rel="noopener">
+                <img src="static/img/logos/facebook.webp" alt="Facebook">
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="/static/img/logos/logo.png" alt="Logo de la veterinaria" class="logo">
+                    </a>
+                </div>
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text" id="logoText"></span>
+                </a>
+            </div>
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#inicio"><img src="/static/img/logos/home.png" alt="home"></a></li>
+                    <li><a href="#inicio" onclick="scrollToServicios(); return false;">Servicios</a></li>
+                    <li><a href="#nosotros-detalle">Nosotros</a></li>
+                    <li><a href="#inicio" onclick="scrollToContact(); return false;">Contacto</a></li>
+                    <li><a href="#inicio" onclick="scrollToInstalaciones(); return false;">Instalaciones</a></li>
+                </ul>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Aquí cargará el contenido SPA -->
+    <main id="app"></main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fa fa-map" aria-hidden="true"></i> Calle 123 #45-67, Bogotá, Colombia</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> +57 310 6494346</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> info@vetcare.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lunes - Viernes: 8:00 AM - 8:00 PM</p>
+                <p>Sábados: 8:00 AM - 6:00 PM</p>
+                <p>Domingos: 9:00 AM - 5:00 PM</p>
+                <p class="Emergencias"> <i class="fa fa-ambulance" aria-hidden="true"></i> Emergencias 24/7</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-footer">
+                    <div class="footer-icons">
+                        <a href="https://wa.me/573106494346" class="whatsapp" target="_blank" rel="noopener">
+                            <img src="static/img/logos/whatsapp.webp" alt="WhatsApp">
+                        </a>
+                        <a href="https://www.instagram.com/vet.alvarocontreras/" class="instagram" target="_blank" rel="noopener">
+                            <img src="static/img/logos/instagram.webp" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/tuusuario" class="facebook" target="_blank" rel="noopener">
+                            <img src="static/img/logos/facebook.webp" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Centro Médico Veterinario Álvaro Andrés Contreras <i class="fa fa-paw" aria-hidden="true"></i>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <a href="https://wa.me/573106494346" class="whatsapp-float" target="_blank" rel="noopener">
+        <img src="static/img/logos/cat_call.png" alt="WhatsApp">
+    </a>
+    <div class="whatsapp-chat-popup" id="whatsappChatPopup">
+        <div class="chat-header">
+            <img src="static/img/logos/logo.png" alt="CMV Logo" class="chat-avatar">
+            <div class="chat-info">
+                <div class="chat-name">CMV Álvaro Contreras</div>
+                <div class="Escríbenos">
+                    <span><i class="fa-solid fa-check-double"></i> Escríbenos</span>
+                    <span class="horario">24/7</span>
+                </div>
+
+            </div>
+            <button class="chat-close" onclick="closeChatPopup()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <script src="./static/js/script.js"></script>
+    <script src="./static/js/secciones.js"></script>    
+</body>
+</html>
